@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour
 
     public UnityAction<float> PowerChanged;
     public UnityAction BallBlocked;
-    public UnityAction BallFinished;
+    public UnityAction LevelFinished;
 
     private void Start()
     {
@@ -84,7 +84,7 @@ public class Ball : MonoBehaviour
                     }
                     else if (hitInfo.collider.TryGetComponent(out Finish finish))
                     {
-                        BallFinished?.Invoke();
+                        LevelFinished?.Invoke();
                     }
                 }
             }

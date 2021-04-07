@@ -16,12 +16,12 @@ public class Finish : MonoBehaviour
 
     private void OnEnable()
     {
-        _ball.BallFinished += OnFinished;
+        _ball.LevelFinished += OnFinished;
     }
 
     private void OnDisable()
     {
-        _ball.BallFinished -= OnFinished;
+        _ball.LevelFinished -= OnFinished;
     }
 
     private void OnFinished()
